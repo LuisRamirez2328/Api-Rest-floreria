@@ -72,7 +72,6 @@ app.delete('/products/:id', (req, res) => {
     });
 });
 
-// GET route to fetch all orders
 app.get('/orders', (req, res) => {
     const query = 'SELECT * FROM orders';
     db.query(query, (err, results) => {
@@ -83,6 +82,7 @@ app.get('/orders', (req, res) => {
         }
     });
 });
+
 
 // POST route to create a new order (ya lo tienes)
 app.post('/orders', (req, res) => {
